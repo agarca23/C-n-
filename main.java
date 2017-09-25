@@ -51,11 +51,28 @@ public class main {
 		
 	}
 	
-//	public static double iterBestSol(){
-//		double sum=1.0;
-//		for(int i=1; i<n; i++){
-//			sum=((2.0/n)*sum)+n;
-//		}
-//	}
+	public static double iter_c_lineal(int n){
+		double sum=1.0;
+		if(n<=0)
+			return 1.0;
+		for(int i=1;i<n; i++){
+			sum=(2.0/i*sum)+i+sum;
+		}
+		return ((2.0/n)*sum)+n;
+	}
+	
+	public static double recur_c_lineal(int n){
+		if(n<=0){
+			return 1.0;
+		}
+		return ((2.0/n)*sumat(n-1)+n);
+	}
+	
+	public static double sumat(int n){
+		if(n<=0)
+			return 1.0;
+		double sum=sumat(n-1);
+		return ((2.0/n)*sum)+n+sum;
+	}
 
 }
