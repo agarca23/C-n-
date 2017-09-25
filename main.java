@@ -10,10 +10,10 @@ public class main {
 		
 		int num = lee.nextInt();
 		
-		System.out.println(iterSol(num));
-		System.out.println(recurSol(num));
-		System.out.println(iter_c_lineal(num));
-		System.out.println(recur_c_lineal(num));
+//		System.out.println(iterSol(num));
+//		System.out.println(recurSol(num));
+//		System.out.println(iter_c_lineal(num));
+		System.out.println((int)recur_c_lineal(num));
 		
 		lee.close();
 		
